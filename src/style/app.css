@@ -1,4 +1,6 @@
 :root {
+  --main-hue: 278;
+  --main-saturation: 1;
   --txt-clr: hsl(0, 0%, 90%);
   --bg-clr: hsl(0, 0%, 15%);
   --border-radius: 4px;
@@ -12,6 +14,13 @@
   --titlebar-btn-title-txt-clr-open: var(--titlebar-btn-title-txt-clr-hover);
   --topbar-bg-clr: hsl(0, 0%, 20%);
   --tab-bg-clr: hsl(0, 0%, 18%);
+  --input-text-bg-clr: hsl(0, 0%, 25%);
+  --input--bg-clr-default: hsl(0, 0%, 46%);
+  --input--bg-clr-hover: hsl(0, 0%, 38%);
+  --input--bg-clr-focus: hsl(0, 0%, 40%);
+  --input-border-radius: 6px;
+  --input-border-width: 2px;
+  --input-border-clr: hsl(0, 0%, 25%);
   --btn--bg-clr-default: hsl(0, 0%, 46%);
   --btn--bg-clr-hover: hsl(0, 0%, 38%);
   --btn--bg-clr-active: hsl(0, 0%, 40%);
@@ -19,6 +28,21 @@
   --btn--bg-clr-toggled-hover: hsl(278, 30%, 55%);
   --btn--bg-clr-toggled-active: hsl(278, 30%, 50%);
   --btn--border-radius: 6px;
+  --btn--border-width: var(--input-border-width);
+  --btn--border-clr: var(--input-border-clr);
+  --bool--bg-clr-default: hsl(0, 0%, 35%);
+  --bool--bg-clr-hover: hsl(0, 0%, 45%);
+  --bool--bg-clr-active: hsl(0, 0%, 40%);
+  --bool--bg-clr-toggled: var(--btn--bg-clr-toggled);
+  --bool--bg-clr-toggled-hover: var(--btn--bg-clr-toggled-hover);
+  --bool--bg-clr-toggled-active: var(--btn--bg-clr-toggled-active);
+  --bool--btn-size: 1.2em;
+  --bool--tick-size: 1;
+  --bool--border-radius: 5px;
+  --bool--border-clr: var(--input-border-clr);
+  --bool--border-width: var(--input-border-width);
+}
+
 html {
   background-color: var(--bg-clr);
 }
