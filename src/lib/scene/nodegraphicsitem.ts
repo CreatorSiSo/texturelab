@@ -24,6 +24,7 @@ export class NodeGraphicsItem extends GraphicsItem {
 	imageCanvas: ImageCanvas;
 
 	processingTime: number;
+	processingSpeed: number;
 
 	hit: boolean;
 
@@ -39,6 +40,7 @@ export class NodeGraphicsItem extends GraphicsItem {
 		this.title = title;
 		this.imageCanvas = new ImageCanvas();
 		this.processingTime = 0;
+		this.processingSpeed = 0;
 		this.hit = false;
 	}
 
@@ -70,6 +72,9 @@ export class NodeGraphicsItem extends GraphicsItem {
 
 	draw(ctx: CanvasRenderingContext2D, renderData: any) {
 		const renderState = <NodeGraphicsItemRenderState>renderData;
+		
+		this.processingSpeed = 160 - 5 * this.processingTime;
+		this.processingSpeed = this.processingSpeed > -5 ? this.processingSpeed : -5;
 
 		// border
 		if (renderState.selected) {
@@ -135,11 +140,15 @@ export class NodeGraphicsItem extends GraphicsItem {
 
 		// processing time
 		ctx.beginPath();
-		let procTime = "calculating..";
-		if (this.processingTime >= 0) procTime = this.processingTime + "ms";
+		ctx.fillStyle = "hsla(50, 100%, 65%, 0.9)";
+		let procTime = "calculating . . .";
+		
+		if (this.processingTime >= 0) {
+			procTime = this.processingTime + "ms";
+			ctx.fillStyle = `hsla(${this.processingSpeed}, 100%, 70%, 0.9)`;
+		}
 
-		ctx.font = "bold 9px 'Open Sans'";
-		ctx.fillStyle = "rgb(255,255,255)";
+		ctx.font = "500 10px 'Open Sans'";
 		const size = ctx.measureText(procTime);
 		const textX = this.centerX() - size.width / 2;
 		const textY = this.y + this.height + 14;
