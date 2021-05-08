@@ -19,6 +19,8 @@
   --btn--bg-clr-toggled-hover: hsl(278, 30%, 55%);
   --btn--bg-clr-toggled-active: hsl(278, 30%, 50%);
   --btn--border-radius: 6px;
+html {
+  background-color: var(--bg-clr);
 }
 
 body {
