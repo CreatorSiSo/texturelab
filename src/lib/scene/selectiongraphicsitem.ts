@@ -76,12 +76,13 @@ export class SelectionGraphicsItem extends GraphicsItem {
 			if (!this.isTooSmall()) {
 				// stroke bounding rect
 				ctx.beginPath();
-				ctx.lineWidth = 3;
-				ctx.strokeStyle = "rgb(250, 250, 250)";
+				ctx.lineWidth = 1;
+				ctx.fillStyle = "hsla(0, 0%, 100%, 0.05)";
+				ctx.strokeStyle = "hsl(0, 0%, 100%)";
 				//this.roundRect(ctx, this.x, this.y, width, height, 1);
 				ctx.rect(this.x, this.y, width, height);
-
-				ctx.setLineDash([5, 3]);
+				ctx.fill();
+				ctx.setLineDash([6, 5]);
 				ctx.stroke();
 				ctx.setLineDash([]);
 
