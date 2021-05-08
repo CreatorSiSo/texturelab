@@ -97,15 +97,15 @@ export class SocketGraphicsItem extends GraphicsItem {
 		// border
 		ctx.beginPath();
 		ctx.arc(this.centerX(), this.centerY(), this.radius, 0, 2 * Math.PI);
-		ctx.strokeStyle = "rgb(0, 0, 0)";
+		ctx.strokeStyle = "hsl(0, 0%, 20%)";
 		ctx.stroke();
 
 		// draw inner dot if connected
 		if (this.hasConnections()) {
 			//console.log("con");
 			ctx.beginPath();
-			ctx.fillStyle = "rgb(100,100,100)";
-			ctx.arc(this.centerX(), this.centerY(), this.radius / 3, 0, 2 * Math.PI);
+			ctx.fillStyle = "hsl(0, 0%, 38%)";
+			ctx.arc(this.centerX(), this.centerY(), this.radius / 1.7, 0, 2 * Math.PI);
 			ctx.fill();
 		}
 
@@ -132,7 +132,7 @@ export class SocketGraphicsItem extends GraphicsItem {
 
 			ctx.beginPath();
 			ctx.strokeStyle = "rgb(200, 200, 200)";
-			ctx.lineWidth = 4;
+			ctx.lineWidth = 3;
 			ctx.moveTo(this.hitSocket.centerX(), this.hitSocket.centerY());
 
 			if (this.hitSocket.socketType == SocketType.Out) {

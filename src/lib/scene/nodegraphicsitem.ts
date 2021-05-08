@@ -80,18 +80,15 @@ export class NodeGraphicsItem extends GraphicsItem {
 			this.roundRect(ctx, this.x, this.y, this.width, this.height, 2);
 			ctx.stroke();
 		}
-
-		// background
+	
+		// background (if thumbnail is not showing)
 		ctx.beginPath();
-		ctx.fillStyle = "rgb(0, 0, 0)";
-		ctx.rect(this.x, this.y, this.width, this.height);
+		ctx.fillStyle = "hsl(0, 0%, 14%)";
+		this.roundRect(ctx, this.x, this.y, this.width, this.height, 4);
 		ctx.fill();
-
 		// thumbnail if any
-		if (this.thumbnail) {
-			//ctx.drawImage(this.thumbnail,this.x, this.y, this.width, this.height);
-		}
-
+		
+		// thumbnail
 		ctx.drawImage(
 			this.imageCanvas.canvas,
 			this.x,
@@ -103,14 +100,14 @@ export class NodeGraphicsItem extends GraphicsItem {
 		// title
 		if (!renderState.hovered) {
 			ctx.beginPath();
-			ctx.fillStyle = "rgb(0,0,0)";
+			ctx.fillStyle = "hsl(0, 0%, 26%)";
 			ctx.rect(this.x, this.y, this.width, 20);
 			ctx.fill();
 
 			ctx.beginPath();
 			//ctx.font = "14px monospace";
-			ctx.font = "bold 9px 'Open Sans'";
-			ctx.fillStyle = "rgb(255,255,255)";
+			ctx.font = "700 9px 'Open Sans'";
+			ctx.fillStyle = "hsl(0, 0%, 95%)";
 			const size = ctx.measureText(this.title);
 			const textX = this.centerX() - size.width / 2;
 			const textY = this.y + 14;
@@ -118,13 +115,18 @@ export class NodeGraphicsItem extends GraphicsItem {
 		}
 
 		// DRAW SHAPE
+		// outline
 		ctx.beginPath();
 		ctx.lineWidth = 4;
-		// if (renderState.selected) ctx.strokeStyle = "rgb(255, 255, 255)";
-		// else ctx.strokeStyle = "rgb(0, 0, 0)";
-		ctx.strokeStyle = "rgb(0, 0, 0)";
-		//ctx.rect(this.x, this.y, this.width, this.height);
-		this.roundRect(ctx, this.x, this.y, this.width, this.height, 2);
+		if (renderState.selected) ctx.strokeStyle = "hsl(0, 0%, 100%)";
+		else if (renderState.hovered) ctx.strokeStyle = "hsl(0, 0%, 24%)";
+		else ctx.strokeStyle = "hsl(0, 0%, 20%)";
+		this.roundRect(ctx, this.x, this.y, this.width, this.height, 4);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.lineWidth = 4;
+		this.roundRect(ctx, this.x, this.y, this.width, this.height, 4);
 		ctx.stroke();
 
 		for (const sock of this.sockets) {
