@@ -79,7 +79,7 @@ export class FrameGraphicsItem extends GraphicsItem implements IPropertyHolder {
 		this.description = "";
 		this.showTitle = true;
 		this.view = view;
-		this.color = new Color(0.1, 0, 0.2);
+		this.color = new Color(41 / 255, 204 / 255, 166 / 255);
 		this.hit = false;
 		this.dragged = true;
 
@@ -217,7 +217,7 @@ export class FrameGraphicsItem extends GraphicsItem implements IPropertyHolder {
 
 			//ctx.font = fontSize + "px 'Open Sans'";
 			ctx.font = "30px 'Open Sans'";
-			ctx.fillStyle = "rgb(240, 240, 240)";
+			ctx.fillStyle = "hsla(0, 0%, 100%, 0.8)";
 			//let size = ctx.measureText(this.textureChannel.toUpperCase());
 			const textX = this.x;
 			const textY = this.y;
