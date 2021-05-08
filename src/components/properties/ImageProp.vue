@@ -6,13 +6,13 @@
 		<div class="input-holder">
 			<canvas @click="loadImage()" width="150" height="150" ref="canvas" />
 			<div class="image-buttons">
-				<button class="image-button load-button" @click="loadImage()">
+				<button class="image-btn load-button" @click="loadImage()">
 					load
 				</button>
-				<button class="image-button reload-button" @click="reloadImage()">
+				<button class="image-btn reload-button" @click="reloadImage()">
 					reload
 				</button>
-				<button class="image-button remove-button" @click="removeImage()">
+				<button class="image-btn remove-button" @click="removeImage()">
 					remove
 				</button>
 			</div>
@@ -226,7 +226,7 @@ export default class ImagePropertyView extends Vue {
 	margin-left: 5px;
 }
 
-.image-button {
+.image-btn {
 	width: 48px;
 	height: 48px;
 	margin: 1px;
@@ -239,7 +239,7 @@ export default class ImagePropertyView extends Vue {
 	border-radius: 4px;
 }
 
-.image-button:hover {
+.image-btn:hover {
 	background: rgb(88, 88, 88);
 }
 </style>
