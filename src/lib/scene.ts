@@ -496,10 +496,14 @@ export class NodeScene {
 		if (this.hitSocket) {
 			ctx.beginPath();
 			ctx.strokeStyle = "rgb(200, 200, 200)";
-			ctx.lineWidth = 4;
+			ctx.lineWidth = 1;
 			ctx.moveTo(this.hitSocket.centerX(), this.hitSocket.centerY());
-
-			if (this.hitSocket.socketType == SocketType.Out) {
+			ctx.lineTo(
+				mouseX,
+				mouseY
+			);
+			
+			/* if (this.hitSocket.socketType == SocketType.Out) {
 				ctx.bezierCurveTo(
 					this.hitSocket.centerX() + 60,
 					this.hitSocket.centerY(), // control point 1
@@ -517,7 +521,7 @@ export class NodeScene {
 					mouseX,
 					mouseY
 				);
-			}
+			} */
 
 			ctx.setLineDash([5, 3]);
 			ctx.stroke();

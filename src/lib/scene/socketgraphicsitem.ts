@@ -27,6 +27,7 @@ export class SocketGraphicsItem extends GraphicsItem {
 	public title!: string;
 	public node!: NodeGraphicsItem;
 	public socketType!: SocketType;
+	public noodleCurving: number;
 	radius = 8;
 
 	// only in sockets store the connection
@@ -81,10 +82,13 @@ export class SocketGraphicsItem extends GraphicsItem {
 
 		this.hit = false;
 		this.hitSocket = null;
+
+		this.noodleCurving = 40;
 	}
 
 	draw(ctx: CanvasRenderingContext2D, renderData: any = null) {
 		const renderState = <NodeGraphicsItemRenderState>renderData;
+
 
 		//console.log(this.width);
 		ctx.lineWidth = 3;
@@ -132,23 +136,23 @@ export class SocketGraphicsItem extends GraphicsItem {
 
 			ctx.beginPath();
 			ctx.strokeStyle = "rgb(200, 200, 200)";
-			ctx.lineWidth = 3;
+			ctx.lineWidth = 2;
 			ctx.moveTo(this.hitSocket.centerX(), this.hitSocket.centerY());
 
 			if (this.hitSocket.socketType == SocketType.Out) {
 				ctx.bezierCurveTo(
-					this.hitSocket.centerX() + 60,
+					this.hitSocket.centerX() + this.noodleCurving,
 					this.hitSocket.centerY(), // control point 1
-					mouseX - 60,
+					mouseX - this.noodleCurving,
 					mouseY,
 					mouseX,
 					mouseY
 				);
 			} else {
 				ctx.bezierCurveTo(
-					this.hitSocket.centerX() - 60,
+					this.hitSocket.centerX() - this.noodleCurving,
 					this.hitSocket.centerY(), // control point 1
-					mouseX + 60,
+					mouseX + this.noodleCurving,
 					mouseY,
 					mouseX,
 					mouseY
