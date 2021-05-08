@@ -24,9 +24,9 @@
   --btn--bg-clr-default: hsl(0, 0%, 46%);
   --btn--bg-clr-hover: hsl(0, 0%, 38%);
   --btn--bg-clr-active: hsl(0, 0%, 40%);
-  --btn--bg-clr-toggled: hsl(278, 30%, 52%);
-  --btn--bg-clr-toggled-hover: hsl(278, 30%, 55%);
-  --btn--bg-clr-toggled-active: hsl(278, 30%, 50%);
+  --btn--bg-clr-toggled: hsl(var(--main-hue), calc(35% * var(--main-saturation)), 55%);
+  --btn--bg-clr-toggled-hover: var(--btn--bg-clr-toggled);
+  --btn--bg-clr-toggled-active: hsl(var(--main-hue), calc(35% * var(--main-saturation)), 50%);
   --btn--border-radius: 6px;
   --btn--border-width: var(--input-border-width);
   --btn--border-clr: var(--input-border-clr);

@@ -1,11 +1,15 @@
-.btn {
+.btn,
+button {
     background: var(--btn--bg-clr-default);
     border-radius: var(--btn--border-radius);
+    border-color: var(--btn--border-clr);
+    border-width: var(--btn--border-width);
+    border-style: solid;
     padding: 0.5em 1em;
 
     text-decoration: none;
 	text-align: center;
-    color: white;
+    color: var(--txt-clr);
     display: flex;
     vertical-align: middle;
     float: left;

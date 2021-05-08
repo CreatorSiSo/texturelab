@@ -1,27 +1,36 @@
-.btn {
+.btn,
+button {
   background: var(--btn--bg-clr-default);
   border-radius: var(--btn--border-radius);
+  border-color: var(--btn--border-clr);
+  border-width: var(--btn--border-width);
+  border-style: solid;
   padding: 0.5em 1em;
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: var(--txt-clr);
   display: flex;
   vertical-align: middle;
   float: left;
   margin-right: 0.5em;
 }
-.btn:hover {
+.btn:hover,
+button:hover {
   background-color: var(--btn--bg-clr-hover);
 }
-.btn:active {
+.btn:active,
+button:active {
   background-color: var(--btn--bg-clr-active);
 }
-.btn.toggled {
+.btn.toggled,
+button.toggled {
   background-color: var(--btn--bg-clr-toggled);
 }
-.btn.toggled:hover {
+.btn.toggled:hover,
+button.toggled:hover {
   background-color: var(--btn--bg-clr-toggled-hover);
 }
-.btn.toggled:active {
+.btn.toggled:active,
+button.toggled:active {
   background-color: var(--btn--bg-clr-toggled-active);
 }
