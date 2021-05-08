@@ -28,4 +28,16 @@
     --btn--border-radius:               6px;
     --btn--border-width:                var(--input-border-width);
     --btn--border-clr:                  var(--input-border-clr);
+    
+    --bool--bg-clr-default:             hsl(0, 0%, 35%);
+    --bool--bg-clr-hover:               hsl(0, 0%, 45%);
+    --bool--bg-clr-active:              hsl(0, 0%, 40%);
+    --bool--bg-clr-toggled:             var(--btn--bg-clr-toggled);
+    --bool--bg-clr-toggled-hover:       var(--btn--bg-clr-toggled-hover);
+    --bool--bg-clr-toggled-active:      var(--btn--bg-clr-toggled-active);
+    --bool--btn-size:                   1.2em;
+    --bool--tick-size:                  1;
+    --bool--border-radius:              5px;
+    --bool--border-clr:                 var(--input-border-clr);
+    --bool--border-width:               var(--input-border-width);
 }

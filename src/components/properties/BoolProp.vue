@@ -1,11 +1,11 @@
 <template>
-	<div class="field">
+	<div class="field no-select" @click="toggleValue()">
+		<button class="bool">
+			<template v-if="val">
+				<img src="../../assets/Tick.svg" alt="Tick">
+			</template>
+		</button>
 		<label>{{ prop.displayName }}</label>
-		<div>
-			<button class="bool" @click="toggleValue()">
-				{{ val ? "True" : "False" }}
-			</button>
-		</div>
 	</div>
 </template>
 
@@ -48,12 +48,20 @@ export default class BoolPropertyView extends Vue {
 	}
 	mounted() {
 		this.val = this.prop.value;
+		
+		let btn = document.getElementsByTagName('button')[0];
+		(this.prop.value) ? btn.classList.add("toggled") : btn.classList.remove("toggled");
 	}
 
 	toggleValue() {
+		let btn = document.getElementsByTagName('button')[0];
+		(!this.prop.value) ? btn.classList.add("toggled") : btn.classList.remove("toggled");
+
 		let evt = { propName: this.prop.name, oldValue: null, newValue: null };
 		let oldValue = this.prop.value;
 		evt.newValue = !this.prop.value;
+
+		// add and remove the toggled class for styling
 
 		//this.value = !this.value;
 		this.propHolder.setProperty(this.prop.name, !this.prop.value);
@@ -95,14 +103,5 @@ export default class BoolPropertyView extends Vue {
 	padding-left: 0;
 }
 
-.bool {
-	margin-top: 0.4em;
-	width: 100%;
-	border: none;
-	border-radius: 2px;
-	color: white;
-	background: #222;
-	padding: 4px;
-	outline: none;
-}
+@import url(../../style/bool.css);
 </style>
