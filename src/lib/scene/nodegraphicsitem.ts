@@ -150,7 +150,7 @@ export class NodeGraphicsItem extends GraphicsItem {
 			ctx.beginPath();
 			//ctx.font = "14px monospace";
 			ctx.font = "12px 'Open Sans'";
-			ctx.fillStyle = "rgb(200, 255, 200)";
+			ctx.fillStyle = "hsla(166, 100%, 60%, 0.9)";
 			const size = ctx.measureText(this.textureChannel.toUpperCase());
 			const textX = this.centerX() - size.width / 2;
 			//const textY = this.y + this.height + 14;
