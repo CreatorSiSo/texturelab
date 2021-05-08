@@ -91,7 +91,6 @@ export class NodeGraphicsItem extends GraphicsItem {
 		ctx.fillStyle = "hsl(0, 0%, 14%)";
 		this.roundRect(ctx, this.x, this.y, this.width, this.height, 4);
 		ctx.fill();
-		// thumbnail if any
 		
 		// thumbnail
 		ctx.drawImage(
