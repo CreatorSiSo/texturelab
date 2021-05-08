@@ -4,3 +4,35 @@ body {
     margin: 0;
     color: var(--txt-clr)
 }
+
+.titlebar {
+    background-color: var(--titlebar-bg-clr) !important;
+    color: var(--titlebar-txt-clr) !important;
+
+    .window-appicon {
+        width: 3em !important;
+        background-size: 18px !important;
+    }
+    .menubar {
+        .menubar-menu-button {
+            &:hover {
+                background-color: var(--titlebar-btn-bg-clr-hover) !important;
+                .menubar-menu-title {
+                    color: var(--titlebar-btn-title-txt-clr-hover) !important;
+                }
+            }
+            /* &:focus {
+                background-color: var(--titlebar-btn-bg-clr-hover) !important;
+                .menubar-menu-title {
+                    color: var(--titlebar-btn-title-txt-clr-hover) !important;
+                }
+            } */
+            &.open {
+                background-color: var(--titlebar-btn-bg-clr-open) !important;
+                .menubar-menu-title {
+                    color: var(--titlebar-btn-title-txt-clr-open) !important;
+                }
+            }
+        }
+    }
+}

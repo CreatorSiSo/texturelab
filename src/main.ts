@@ -21,9 +21,9 @@ Vue.use(vgl);
 
 import { Titlebar, Color } from "custom-electron-titlebar";
 const titleBar = new Titlebar({
-	backgroundColor: Color.fromHex("#333333"),
-	icon: "./favicon.svg",
-	shadow: true
+  backgroundColor: Color.fromHex('#323232'),
+  icon: './icon.png',
+  shadow: false
 });
 
 let app = new Vue({

@@ -2,6 +2,16 @@
     --txt-clr:                          hsl(0, 0%, 90%);
     --bg-clr:                           hsl(0, 0%, 15%);
     --border-radius:                    4px;
+
+    --titlebar-txt-clr:                 hsl(0, 0%, 70%);
+    --titlebar-bg-clr:                  hsl(0, 0%, 20%);
+    --titlebar-appicon-bg-width:        3em;
+    --titlebar-appicon-size:            18px;
+    --titlebar-btn-bg-clr-hover:        hsla(0, 0%, 100%, 0.2);
+    --titlebar-btn-bg-clr-open:         var(--titlebar-btn-bg-clr-hover);
+    --titlebar-btn-title-txt-clr-hover: hsl(0, 0%, 95%);
+    --titlebar-btn-title-txt-clr-open:  var(--titlebar-btn-title-txt-clr-hover);
+
     --topbar-bg-clr:                    hsl(0, 0%, 20%);
 
     --tab-bg-clr:                       hsl(0, 0%, 18%);
