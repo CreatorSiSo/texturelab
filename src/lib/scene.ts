@@ -549,10 +549,10 @@ export class NodeScene {
 
 		// todo: draw grid
 
-		this.view.clear(this.context, "#4A5050");
+		this.view.clear(this.context, "hsl(0, 0%, 10%)");
 		this.view.setViewMatrix(this.context);
-		this.view.drawGrid(this.context, 33.33333, "#4E5454", 1);
-		this.view.drawGrid(this.context, 100, "#464C4C", 3);
+		this.view.drawGrid(this.context, 25, "hsla(0, 0%, 0%, 0.5)", 1);
+		this.view.drawGrid(this.context, 100, "hsla(0, 0%, 0%, 0.5)", 1.5);
 	}
 
 	draw() {
