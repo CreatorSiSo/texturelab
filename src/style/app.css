@@ -1,0 +1,40 @@
+:root {
+  --txt-clr: hsl(0, 0%, 90%);
+  --bg-clr: hsl(0, 0%, 15%);
+  --border-radius: 4px;
+  --topbar-bg-clr: hsl(0, 0%, 20%);
+  --tab-bg-clr: hsl(0, 0%, 18%);
+  --btn--bg-clr-default: hsl(0, 0%, 46%);
+  --btn--bg-clr-hover: hsl(0, 0%, 38%);
+  --btn--bg-clr-active: hsl(0, 0%, 40%);
+  --btn--bg-clr-toggled: hsl(278, 30%, 52%);
+  --btn--bg-clr-toggled-hover: hsl(278, 30%, 55%);
+  --btn--bg-clr-toggled-active: hsl(278, 30%, 50%);
+  --btn--border-radius: 6px;
+}
+
+body {
+  overflow: hidden;
+  /* The 'light' theme let a scroll-bar on the right of the main container */
+  padding: 0;
+  margin: 0;
+  color: var(--txt-clr);
+}
+.lm_tab {
+  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  background: var(--bg-clr) !important;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  height: 24px !important;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}

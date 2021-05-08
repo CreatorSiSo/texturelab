@@ -167,8 +167,9 @@ function fitCanvasToContainer(canvas) {
 </script>
 
 <style scoped>
+@import url(./../style/button.css);
+
 .btn {
-	text-align: center;
 	height: 1.6em;
 	/* width: 1.6em; */
 	border-radius: 2px;
@@ -178,15 +179,6 @@ function fitCanvasToContainer(canvas) {
 	padding: 0.4em 0.4em 0.3em 0.4em;
 	margin: 0.1em;
 	text-decoration: none;
-	background: #666;
 	color: rgba(255, 255, 255, 0.7);
-}
-
-.btn:hover {
-	background: #999;
-}
-
-.toggled {
-	background: #444;
 }
 </style>

@@ -1,0 +1,29 @@
+.btn {
+    background: var(--btn--bg-clr-default);
+    border-radius: var(--btn--border-radius);
+    padding: 0.5em 1em;
+
+    text-decoration: none;
+	text-align: center;
+    color: white;
+    display: flex;
+    vertical-align: middle;
+    float: left;
+    margin-right: 0.5em;
+
+    &:hover {
+        background-color: var(--btn--bg-clr-hover);
+    }
+    &:active {
+        background-color: var(--btn--bg-clr-active);
+    }
+    &.toggled {
+        background-color: var(--btn--bg-clr-toggled);
+        &:hover {
+            background-color: var(--btn--bg-clr-toggled-hover);
+        }
+        &:active {
+            background-color: var(--btn--bg-clr-toggled-active);
+        }
+    }
+}

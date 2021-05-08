@@ -1,0 +1,27 @@
+.btn {
+  background: var(--btn--bg-clr-default);
+  border-radius: var(--btn--border-radius);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: flex;
+  vertical-align: middle;
+  float: left;
+  margin-right: 0.5em;
+}
+.btn:hover {
+  background-color: var(--btn--bg-clr-hover);
+}
+.btn:active {
+  background-color: var(--btn--bg-clr-active);
+}
+.btn.toggled {
+  background-color: var(--btn--bg-clr-toggled);
+}
+.btn.toggled:hover {
+  background-color: var(--btn--bg-clr-toggled-hover);
+}
+.btn.toggled:active {
+  background-color: var(--btn--bg-clr-toggled-active);
+}

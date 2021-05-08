@@ -1,15 +1,15 @@
 <template>
 	<div>
 		<div class="topbar no-select">
-			<a class="button" href="#" @click="undoAction()">
+			<a class="btn" href="#" @click="undoAction()">
 				<i class="bx bx-undo" style="font-size:1.4rem !important;"></i>Undo
 			</a>
-			<a class="button" href="#" @click="redoAction()">
+			<a class="btn" href="#" @click="redoAction()">
 				<i class="bx bx-redo" style="font-size:1.4rem !important;"></i>Redo
 			</a>
 
-			<a class="right button" href="#" @click="exportUnity()">Unity Export</a>
-			<a class="right button" href="#" @click="exportZip()">Zip Export</a>
+			<a class="right btn" href="#" @click="exportUnity()">Unity Export</a>
+			<a class="right btn" href="#" @click="exportZip()">Zip Export</a>
 		</div>
 		<golden-layout
 			class="container"
@@ -50,8 +50,8 @@
 						/>
 						<div class="editor-menu" style="height:2em;">
 							<!-- <a class="btn" href="#" @click="setShape('sphere')">S</a>
-      <a class="btn" href="#" @click="setShape('cube')">C</a>
-      <a class="btn" href="#" @click="setShape('plane')">P</a>
+      						<a class="btn" href="#" @click="setShape('cube')">C</a>
+      						<a class="btn" href="#" @click="setShape('plane')">P</a>
 							<a class="btn" href="#" @click="setShape('cylinder')">C</a>-->
 							<select class="enum" :value="resolution" @change="setResolution">
 								<option value="32">Resolution: 32x32</option>
@@ -111,126 +111,13 @@
 </template>
 
 <style>
-body {
-	overflow: hidden; /* The 'light' theme let a scroll-bar on the right of the main container */
-	padding: 0;
-	margin: 0;
-}
-
-.lm_tab {
-	font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-	background: #333 !important;
-	/* border-radius: 2px 2px 0 0; */
-	height: 24px !important;
-	box-sizing: border-box;
-	line-height: 24px;
-	font-weight: bold;
-	-webkit-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-app-region: no-drag;
-}
-
-.no-select {
-	-webkit-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-app-region: no-drag;
-}
+@import url(./style/app.css);
 </style>
 <style scoped>
-.topbar {
-	background: #333;
-	border-bottom: 2px black solid;
-	flex-grow: 0;
-	/* flex-basis: 100px; */
-	padding: 0.5em 0;
-	overflow: hidden;
-	padding-left: 0.5em;
-}
-
-.button {
-	border-radius: 2px;
-	background: #666;
-	padding: 0.5em 1em;
-	text-decoration: none;
-	color: white;
-	display: flex;
-	vertical-align: middle;
-	float: left;
-	margin-right: 0.5em;
-}
-
-.button:hover {
-	background: #999;
-}
-
-.button:active {
-	background: #555;
-}
-
-.right {
-	float: right;
-}
-
-.hscreen {
-	/* width: 100vw; */
-	/* height: calc(100vh - 2em); */
-	/* height: 100%; */
-	padding: 0;
-	margin: 0;
-	/* flex-grow: 1; */
-}
-
+@import url(./style/scoped.css);
+@import url(./style/button.css);
 .container {
-	display: block;
-	width: 100vw;
-	height: calc(100vh - 30px - 38px - (2 * 0.5em) - 2px);
-	/* flex-direction: column; */
-}
-
-.glComponent {
-	background: #333;
-}
-.test-component {
-	overflow: hidden;
-	background: #333;
-}
-
-.editor-menu .enum {
-	margin-top: 0.1em;
-	border: solid white 1px;
-	border-radius: 2px;
-	color: white;
-	background: #222;
-	padding: 4px;
-	margin-right: 5px;
-}
-
-.editor-menu span {
-	color: white;
-}
-
-.editor-menu input[type="number"] {
-	/* //color: white; */
-	margin: 5px;
-	border: solid white 1px;
-	border-radius: 2px;
-	line-height: 1.5em;
-	width: 3em;
-	padding: 0 5px;
-}
-
-.enum {
-	outline: 0;
-	box-shadow: none;
-	border: 0 !important;
-
-	margin-top: 0.4em;
-	border: none;
-	border-radius: 4px;
-	color: white;
-	background: #222;
-	padding: 0.5em;
-	font-family: "Open Sans";
+	height: calc(100vh - 86px);
 }
 </style>
 

@@ -1,0 +1,77 @@
+.topbar {
+  background: var(--bg-clr);
+  border-bottom: 2px black solid;
+  flex-grow: 0;
+  padding: 0.5em 0;
+  overflow: hidden;
+  padding-left: 0.5em;
+}
+
+.right {
+  float: right;
+}
+
+.hscreen {
+  /* width: 100vw; */
+  /* height: calc(100vh - 2em); */
+  /* height: 100%; */
+  padding: 0;
+  margin: 0;
+  /* flex-grow: 1; */
+}
+
+.container {
+  display: block;
+  width: 100%;
+  /* flex-direction: column; */
+}
+
+.properties {
+  height: calc(100vh - 86px);
+}
+
+.glComponent {
+  background: #333;
+}
+
+.test-component {
+  overflow: hidden;
+  background: #333;
+}
+
+.editor-menu .enum {
+  margin-top: 0.1em;
+  border: solid white 1px;
+  border-radius: 2px;
+  color: white;
+  background: #222;
+  padding: 4px;
+  margin-right: 5px;
+}
+
+.editor-menu span {
+  color: white;
+}
+
+.editor-menu input[type=number] {
+  /* //color: white; */
+  margin: 5px;
+  border: solid white 1px;
+  border-radius: 2px;
+  line-height: 1.5em;
+  width: 3em;
+  padding: 0 5px;
+}
+
+.enum {
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  margin-top: 0.4em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background: #222;
+  padding: 0.5em;
+  font-family: "Open Sans";
+}
