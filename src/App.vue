@@ -112,6 +112,34 @@
 
 <style>
 @import url(./style/app.css);
+body {
+	overflow: hidden; /* The 'light' theme let a scroll-bar on the right of the main container */
+	padding: 0;
+	margin: 0;
+}
+
+.lm_tab {
+	font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+	background: #333 !important;
+	/* border-radius: 2px 2px 0 0; */
+	height: 24px !important;
+	box-sizing: border-box;
+	line-height: 24px;
+	font-weight: bold;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+}
+
+.no-select {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+}
+
+.no-drag {
+  -webkit-user-drag: none;
+}
 </style>
 <style scoped>
 @import url(./style/scoped.css);
